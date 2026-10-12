@@ -1370,6 +1370,49 @@
       }
     }
 
+    /* ============ FOTO PROFIL RESPONSIF ============ */
+    .intro {
+      grid-template-columns: minmax(0, 1fr) clamp(9rem, 24vw, 17rem);
+      align-items: center;
+    }
+
+    .intro .hero-name {
+      font-size: clamp(2.3rem, 7.5vw, 5.6rem);
+      max-width: 16ch;
+    }
+
+    .portrait {
+      width: 100%;
+      max-width: 17rem;
+      margin: 0;
+      justify-self: end;
+    }
+
+    .portrait img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      object-position: center top;
+      box-shadow: clamp(5px, 1vw, 10px) clamp(5px, 1vw, 10px) 0 var(--mark);
+    }
+
+    @media (max-width: 40rem) {
+      .intro {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .portrait {
+        order: -1;
+        width: min(62%, 14rem);
+        justify-self: start;
+      }
+
+      .intro .hero-name {
+        font-size: clamp(2.2rem, 11vw, 3.4rem);
+      }
+    }
+
     @media (prefers-reduced-motion: reduce) {
       html {
         scroll-behavior: auto;
@@ -1459,7 +1502,7 @@
 
         <div class="intro">
           <div class="intro-text">
-            <h1 class="hero-name">Muhammad Fadlan Syakur</h1>
+            <h1 class="hero-name">Muhammad Fadlan Syakur Permana</h1>
 
             <p class="sr">Business Analyst, IT Operations Support, Data Analyst, Full-stack Developer, Mentor dan
               Pengajar, Event Operator, Fotografer dan Videografer, Mahasiswa Aktif.</p>
