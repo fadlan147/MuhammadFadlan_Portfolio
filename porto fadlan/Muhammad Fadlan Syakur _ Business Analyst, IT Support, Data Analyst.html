@@ -1,0 +1,1529 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Muhammad Fadlan Syakur | Business Analyst, IT Support, Data Analyst</title>
+  <meta name="description"
+    content="Resume dan portofolio interaktif Muhammad Fadlan Syakur: Business Analyst, IT Operations Support, Data Analyst, Web Developer, mentor, dan event operations.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Figtree:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --paper: #eef1f5;
+      --surface: #ffffff;
+      --ink: #14213d;
+      --ink-soft: #46506a;
+      --line: #cdd4e0;
+      --accent: #2b50e6;
+      --mark: #f2b134;
+      --hero: #0d1530;
+      --hero-ink: #eef1f5;
+      --hero-soft: #aab4d0;
+
+      --c-an: #2b50e6;
+      --c-tek: #0e9f8e;
+      --c-aj: #8a4fff;
+      --c-ev: #ff5a3c;
+
+      --font-display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+      --font-body: "Figtree", "Segoe UI", system-ui, -apple-system, sans-serif;
+
+      box-sizing: border-box;
+      padding-top: env(safe-area-inset-top, 0px);
+      padding-bottom: env(safe-area-inset-bottom, 0px);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]):not(:has(#t-light:checked)) {
+        --paper: #0a0f1d;
+        --surface: #141c33;
+        --ink: #e8ecf6;
+        --ink-soft: #a5afc6;
+        --line: #28324f;
+        --accent: #8aa3ff;
+        --hero: #131d42;
+        --c-an: #8aa3ff;
+        --c-tek: #35d1bd;
+        --c-aj: #b494ff;
+        --c-ev: #ff8a70;
+      }
+    }
+
+    :root[data-theme="dark"],
+    :root:has(#t-dark:checked) {
+      --paper: #0a0f1d;
+      --surface: #141c33;
+      --ink: #e8ecf6;
+      --ink-soft: #a5afc6;
+      --line: #28324f;
+      --accent: #8aa3ff;
+      --hero: #131d42;
+      --c-an: #8aa3ff;
+      --c-tek: #35d1bd;
+      --c-aj: #b494ff;
+      --c-ev: #ff8a70;
+    }
+
+    html {
+      scroll-padding-top: calc(env(safe-area-inset-top, 0px) + 5rem);
+      scroll-behavior: smooth;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--font-body);
+      font-size: 1.0625rem;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .vh {
+      position: absolute;
+      opacity: 0;
+      width: 1px;
+      height: 1px;
+      pointer-events: none;
+    }
+
+    .sr {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+    }
+
+    .wrap {
+      width: min(100%, 70rem);
+      margin-inline: auto;
+      padding-inline: clamp(1.25rem, 5vw, 3rem);
+    }
+
+    :focus-visible {
+      outline: 3px solid var(--mark);
+      outline-offset: 3px;
+    }
+
+    /* Progress baca (jika browser mendukung) */
+    .progress {
+      display: none;
+    }
+
+    @supports (animation-timeline: scroll()) {
+      .progress {
+        display: block;
+        position: fixed;
+        top: env(safe-area-inset-top, 0px);
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: var(--mark);
+        transform-origin: left;
+        transform: scaleX(0);
+        animation: grow linear both;
+        animation-timeline: scroll(root);
+        z-index: 20;
+      }
+
+      @keyframes grow {
+        to {
+          transform: scaleX(1);
+        }
+      }
+    }
+
+    /* HERO */
+    .hero {
+      background: var(--hero);
+      color: var(--hero-ink);
+      padding-bottom: clamp(2.5rem, 7vw, 4.5rem);
+      border-bottom: 4px solid var(--mark);
+      padding-top: clamp(1rem, 3vw, 2rem);
+    }
+
+    /* NAVBAR */
+    .nav {
+      position: sticky;
+      top: env(safe-area-inset-top, 0px);
+      z-index: 15;
+      color: var(--hero-ink);
+      background: color-mix(in srgb, var(--hero) 88%, transparent);
+      -webkit-backdrop-filter: blur(14px);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(255, 255, 255, .12);
+    }
+
+    .nav-in {
+      display: flex;
+      align-items: center;
+      gap: clamp(0.6rem, 3vw, 2rem);
+      min-height: 3.75rem;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.7rem;
+      text-decoration: none;
+      font-family: var(--font-display);
+      font-weight: 600;
+      flex: none;
+    }
+
+    .mono {
+      display: grid;
+      place-items: center;
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 50%;
+      background: var(--mark);
+      color: #2a1d00;
+      font-weight: 800;
+      font-size: 0.8rem;
+      letter-spacing: -0.02em;
+      transition: transform .25s;
+    }
+
+    .brand:hover .mono {
+      transform: rotate(-8deg) scale(1.06);
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 0.2rem;
+      margin: 0;
+      padding: 0;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+
+    .nav-links::-webkit-scrollbar {
+      display: none;
+    }
+
+    .nav-links a {
+      position: relative;
+      display: block;
+      padding: 0.5rem 0.95rem 0.7rem;
+      border-radius: 999px;
+      text-decoration: none;
+      color: var(--hero-soft);
+      font-weight: 500;
+      font-size: 0.95rem;
+      white-space: nowrap;
+      transition: background .2s, color .2s;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: 0.3rem;
+      width: 0;
+      height: 3px;
+      border-radius: 3px;
+      background: var(--mark);
+      transform: translateX(-50%);
+      transition: width .2s;
+    }
+
+    .nav-links a:hover {
+      background: rgba(255, 255, 255, .08);
+      color: var(--hero-ink);
+    }
+
+    .nav-links a:hover::after {
+      width: 1rem;
+    }
+
+    :root:has(#pengalaman:target) .nav-links a[href="#pengalaman"],
+    :root:has(#peta:target) .nav-links a[href="#peta"],
+    :root:has(#keahlian:target) .nav-links a[href="#keahlian"] {
+      color: var(--hero-ink);
+    }
+
+    :root:has(#pengalaman:target) .nav-links a[href="#pengalaman"]::after,
+    :root:has(#peta:target) .nav-links a[href="#peta"]::after,
+    :root:has(#keahlian:target) .nav-links a[href="#keahlian"]::after {
+      width: 1.4rem;
+    }
+
+    .nav-status {
+      margin-left: auto;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      padding: 0.4rem 0.95rem;
+      border: 1px solid rgba(255, 255, 255, .22);
+      border-radius: 999px;
+      text-decoration: none;
+      color: var(--hero-ink);
+      font-size: 0.88rem;
+      white-space: nowrap;
+      transition: border-color .2s, background .2s;
+    }
+
+    .nav-status:hover {
+      border-color: var(--mark);
+      background: rgba(255, 255, 255, .06);
+    }
+
+    .nav-status .dot {
+      width: 0.55rem;
+      height: 0.55rem;
+      border-radius: 50%;
+      background: #ff4b4b;
+      animation: blink 1.4s steps(1) infinite;
+    }
+
+    @media (max-width: 62rem) {
+      .nav-status {
+        display: none;
+      }
+    }
+
+    @media (max-width: 34rem) {
+      .brand-name {
+        display: none;
+      }
+
+      .nav-links a {
+        padding-inline: 0.7rem;
+        font-size: 0.9rem;
+      }
+    }
+
+    .theme {
+      display: inline-flex;
+      border: 1px solid rgba(255, 255, 255, .25);
+      border-radius: 999px;
+      padding: 3px;
+    }
+
+    .theme label {
+      padding: 0.25rem 0.8rem;
+      border-radius: 999px;
+      cursor: pointer;
+      color: var(--hero-soft);
+      font-size: 0.88rem;
+    }
+
+    .theme input:checked+label {
+      background: var(--hero-ink);
+      color: var(--hero);
+      font-weight: 600;
+    }
+
+    .theme input:focus-visible+label {
+      outline: 3px solid var(--mark);
+    }
+
+    .finder {
+      --b: 3px;
+      --len: 2.2rem;
+      position: relative;
+      margin-top: clamp(1rem, 4vw, 2.5rem);
+      padding: clamp(1.5rem, 4vw, 2.75rem) clamp(1.25rem, 4vw, 3rem) clamp(1.5rem, 4vw, 2.5rem);
+      background:
+        linear-gradient(var(--mark), var(--mark)) top left / var(--len) var(--b),
+        linear-gradient(var(--mark), var(--mark)) top left / var(--b) var(--len),
+        linear-gradient(var(--mark), var(--mark)) top right / var(--len) var(--b),
+        linear-gradient(var(--mark), var(--mark)) top right / var(--b) var(--len),
+        linear-gradient(var(--mark), var(--mark)) bottom left / var(--len) var(--b),
+        linear-gradient(var(--mark), var(--mark)) bottom left / var(--b) var(--len),
+        linear-gradient(var(--mark), var(--mark)) bottom right / var(--len) var(--b),
+        linear-gradient(var(--mark), var(--mark)) bottom right / var(--b) var(--len);
+      background-repeat: no-repeat;
+    }
+
+    .hud {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+      font-size: 0.9rem;
+      color: var(--hero-soft);
+      margin-bottom: 1.25rem;
+    }
+
+    .rec::before {
+      content: "";
+      display: inline-block;
+      width: 0.65rem;
+      height: 0.65rem;
+      border-radius: 50%;
+      background: #ff4b4b;
+      margin-right: 0.5rem;
+      animation: blink 1.4s steps(1) infinite;
+    }
+
+    @keyframes blink {
+      50% {
+        opacity: 0.15;
+      }
+    }
+
+    .lens-now::after {
+      color: var(--hero-ink);
+      font-weight: 600;
+    }
+
+    :root:has(#f-an:checked) .lens-now::after {
+      content: "Analisis dan produk";
+    }
+
+    :root:has(#f-tek:checked) .lens-now::after {
+      content: "Teknologi";
+    }
+
+    :root:has(#f-aj:checked) .lens-now::after {
+      content: "Mengajar";
+    }
+
+    :root:has(#f-ev:checked) .lens-now::after {
+      content: "Event dan visual";
+    }
+
+    .hero h1 {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: clamp(2.9rem, 11vw, 7.8rem);
+      line-height: 0.9;
+      letter-spacing: -0.04em;
+      margin: 0;
+      max-width: 11ch;
+    }
+
+    .rotor {
+      display: flex;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin: 1.5rem 0 0;
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: clamp(1.15rem, 4.2vw, 2rem);
+      line-height: 1.2;
+    }
+
+    .rotor .lead {
+      color: var(--hero-soft);
+    }
+
+    .window {
+      display: inline-block;
+      height: 1.2em;
+      overflow: hidden;
+      color: var(--mark);
+    }
+
+    .window ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      animation: roll 16s cubic-bezier(.7, 0, .2, 1) infinite;
+    }
+
+    .window li {
+      height: 1.2em;
+      white-space: nowrap;
+    }
+
+    @keyframes roll {
+
+      0%,
+      10% {
+        transform: translateY(0);
+      }
+
+      12.5%,
+      22.5% {
+        transform: translateY(-12.5%);
+      }
+
+      25%,
+      35% {
+        transform: translateY(-25%);
+      }
+
+      37.5%,
+      47.5% {
+        transform: translateY(-37.5%);
+      }
+
+      50%,
+      60% {
+        transform: translateY(-50%);
+      }
+
+      62.5%,
+      72.5% {
+        transform: translateY(-62.5%);
+      }
+
+      75%,
+      85% {
+        transform: translateY(-75%);
+      }
+
+      87.5%,
+      97.5% {
+        transform: translateY(-87.5%);
+      }
+
+      100% {
+        transform: translateY(-100%);
+      }
+    }
+
+    .about {
+      max-width: 40rem;
+      margin: 1.25rem 0 0;
+      color: var(--hero-soft);
+      font-size: 1.12rem;
+    }
+
+    .nowrow {
+      list-style: none;
+      padding: 0;
+      margin: clamp(1.5rem, 4vw, 2.5rem) 0 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+      gap: 0.75rem;
+    }
+
+    .nowrow a {
+      display: block;
+      text-decoration: none;
+      padding: 0.9rem 1.1rem;
+      border: 1px solid rgba(255, 255, 255, .22);
+      border-radius: 0.75rem;
+      transition: background .2s, border-color .2s, transform .2s;
+    }
+
+    .nowrow a:hover {
+      background: rgba(255, 255, 255, .07);
+      border-color: var(--mark);
+      transform: translateY(-2px);
+    }
+
+    .nowrow strong {
+      display: block;
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 1.15rem;
+      line-height: 1.25;
+    }
+
+    .nowrow span {
+      font-size: 0.92rem;
+      color: var(--hero-soft);
+    }
+
+    /* FOTO PROFIL */
+    .intro {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: center;
+      gap: clamp(1.5rem, 4vw, 3rem);
+    }
+
+    .intro .hero-name {
+      font-size: clamp(2.9rem, 9vw, 6.4rem);
+    }
+
+    .portrait {
+      margin: 0;
+      width: clamp(9.5rem, 21vw, 16rem);
+    }
+
+    .portrait img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      border-radius: 0.75rem;
+      background: var(--hero);
+      box-shadow: 10px 10px 0 var(--mark);
+    }
+
+    @media (max-width: 40rem) {
+      .intro {
+        grid-template-columns: 1fr;
+      }
+
+      .portrait {
+        order: -1;
+        width: 9.5rem;
+      }
+    }
+
+    /* SEKSI */
+    section {
+      padding-block: clamp(2.25rem, 6vw, 4rem);
+    }
+
+    .section-head {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: clamp(1.8rem, 4.5vw, 2.8rem);
+      letter-spacing: -0.02em;
+      line-height: 1.05;
+      margin: 0 0 0.5rem;
+    }
+
+    .section-note {
+      margin: 0 0 1.75rem;
+      color: var(--ink-soft);
+      max-width: 40rem;
+    }
+
+    /* FILTER LENSA */
+    .lens {
+      display: block;
+      margin: 0 0 clamp(1.5rem, 4vw, 2.25rem);
+      padding: 0;
+      border: 0;
+    }
+
+    .lens legend {
+      padding: 0;
+      margin-bottom: 0.6rem;
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--ink-soft);
+    }
+
+    .lens .opts {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .lens label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      border: 2px solid var(--ink);
+      border-radius: 999px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 0.95rem;
+      background: var(--surface);
+      transition: background .15s, color .15s, transform .15s;
+    }
+
+    .lens label:hover {
+      transform: translateY(-2px);
+    }
+
+    .lens label i {
+      width: 0.7rem;
+      height: 0.7rem;
+      border-radius: 50%;
+      background: var(--dot, var(--ink));
+      display: inline-block;
+    }
+
+    .lens input:checked+label {
+      background: var(--ink);
+      color: var(--paper);
+    }
+
+    .lens input:focus-visible+label {
+      outline: 3px solid var(--mark);
+      outline-offset: 3px;
+    }
+
+    .lens .l-an {
+      --dot: var(--c-an);
+    }
+
+    .lens .l-tek {
+      --dot: var(--c-tek);
+    }
+
+    .lens .l-aj {
+      --dot: var(--c-aj);
+    }
+
+    .lens .l-ev {
+      --dot: var(--c-ev);
+    }
+
+    :root:has(#f-an:checked) .job:not(.c-an),
+    :root:has(#f-tek:checked) .job:not(.c-tek),
+    :root:has(#f-aj:checked) .job:not(.c-aj),
+    :root:has(#f-ev:checked) .job:not(.c-ev) {
+      display: none;
+    }
+
+    :root:has(#f-an:checked) .bar-row:not(.c-an),
+    :root:has(#f-tek:checked) .bar-row:not(.c-tek),
+    :root:has(#f-aj:checked) .bar-row:not(.c-aj),
+    :root:has(#f-ev:checked) .bar-row:not(.c-ev) {
+      opacity: 0.2;
+      pointer-events: none;
+    }
+
+    .p-an {
+      --cat: var(--c-an);
+    }
+
+    .p-tek {
+      --cat: var(--c-tek);
+    }
+
+    .p-aj {
+      --cat: var(--c-aj);
+    }
+
+    .p-ev {
+      --cat: var(--c-ev);
+    }
+
+    /* PETA WAKTU */
+    .gantt {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .gantt .years,
+    .bar-row {
+      display: grid;
+      grid-template-columns: 15rem 1fr;
+      column-gap: 1rem;
+      align-items: center;
+    }
+
+    .gantt .years div {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      font-weight: 600;
+      font-size: 0.85rem;
+      color: var(--ink-soft);
+      padding-bottom: 0.4rem;
+    }
+
+    .gantt .years div span {
+      padding-left: 0.35rem;
+    }
+
+    .bar-label {
+      font-size: 0.92rem;
+      line-height: 1.3;
+      padding-block: 0.3rem;
+      transition: opacity .2s;
+    }
+
+    .track {
+      display: grid;
+      grid-template-columns: repeat(72, 1fr);
+      height: 2.1rem;
+      align-items: center;
+      background-image: linear-gradient(to right, var(--line) 1px, transparent 1px);
+      background-size: calc(100% / 6) 100%;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .bar {
+      display: block;
+      height: 1.15rem;
+      min-width: 8px;
+      border-radius: 999px;
+      background: var(--cat);
+      transition: transform .15s, box-shadow .15s;
+    }
+
+    .bar.live {
+      position: relative;
+    }
+
+    .bar.live::after {
+      content: "";
+      position: absolute;
+      right: -4px;
+      top: 50%;
+      width: 11px;
+      height: 11px;
+      margin-top: -5.5px;
+      border-radius: 50%;
+      background: var(--mark);
+      box-shadow: 0 0 0 3px var(--paper);
+    }
+
+    .bar-row {
+      transition: opacity .25s;
+    }
+
+    /* Sorot dua arah: bar <-> kartu */
+    :root:has(#b-uq:is(:hover, :focus-visible)) #j-uq,
+    :root:has(#b-lk:is(:hover, :focus-visible)) #j-lk,
+    :root:has(#b-rv:is(:hover, :focus-visible)) #j-rv,
+    :root:has(#b-bh:is(:hover, :focus-visible)) #j-bh,
+    :root:has(#b-ib:is(:hover, :focus-visible)) #j-ib,
+    :root:has(#b-am:is(:hover, :focus-visible)) #j-am,
+    :root:has(#b-wo:is(:hover, :focus-visible)) #j-wo,
+    :root:has(#b-tp:is(:hover, :focus-visible)) #j-tp,
+    .job:hover {
+      background: var(--surface);
+      box-shadow: 0 0 0 2px var(--cat);
+    }
+
+    :root:has(#j-uq:hover) #b-uq,
+    :root:has(#j-lk:hover) #b-lk,
+    :root:has(#j-rv:hover) #b-rv,
+    :root:has(#j-bh:hover) #b-bh,
+    :root:has(#j-ib:hover) #b-ib,
+    :root:has(#j-am:hover) #b-am,
+    :root:has(#j-wo:hover) #b-wo,
+    :root:has(#j-tp:hover) #b-tp,
+    .bar:is(:hover, :focus-visible) {
+      transform: scaleY(1.45);
+      box-shadow: 0 0 0 3px var(--paper), 0 0 0 5px var(--cat);
+    }
+
+    /* KARTU PENGALAMAN */
+    .timeline {
+      display: grid;
+      gap: 0.9rem;
+    }
+
+    .job {
+      display: grid;
+      grid-template-columns: 11rem 1fr clamp(10rem, 18vw, 14rem);
+      column-gap: clamp(1.25rem, 4vw, 3rem);
+      padding: 1.5rem 1.5rem 1.5rem clamp(1.25rem, 3vw, 1.75rem);
+      border-left: 6px solid var(--cat);
+      border-radius: 0 0.9rem 0.9rem 0;
+      background: color-mix(in srgb, var(--surface) 55%, transparent);
+      transition: background .2s, box-shadow .2s;
+    }
+
+    .job .when {
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--ink-soft);
+      padding-top: 0.35rem;
+    }
+
+    .job .when time {
+      display: block;
+      color: var(--ink);
+    }
+
+    .badge {
+      display: inline-block;
+      margin-top: 0.5rem;
+      background: var(--mark);
+      color: #3a2a00;
+      font-size: 0.8rem;
+      font-weight: 600;
+      line-height: 1;
+      padding: 0.35rem 0.6rem;
+      border-radius: 999px;
+    }
+
+    .job h3 {
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: clamp(1.3rem, 2.6vw, 1.65rem);
+      line-height: 1.2;
+      margin: 0;
+      letter-spacing: -0.01em;
+    }
+
+    .job .org {
+      margin: 0.2rem 0 0;
+      font-weight: 600;
+      color: var(--cat);
+    }
+
+    .job .meta {
+      margin: 0.1rem 0 0.9rem;
+      font-size: 0.92rem;
+      color: var(--ink-soft);
+    }
+
+    .job ul {
+      margin: 0;
+      padding-left: 1.2rem;
+      display: grid;
+      gap: 0.45rem;
+      max-width: 42rem;
+    }
+
+    .job li::marker {
+      color: var(--cat);
+    }
+
+    .skills-line {
+      margin: 0.9rem 0 0;
+      font-size: 0.95rem;
+      color: var(--ink-soft);
+      max-width: 42rem;
+    }
+
+    .skills-line b {
+      color: var(--ink);
+      font-weight: 600;
+    }
+
+    .shot {
+      margin: 0;
+      align-self: start;
+    }
+
+    .shot img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      border-radius: 0.7rem;
+      background: var(--surface);
+    }
+
+    @media (max-width: 64rem) {
+      .job {
+        grid-template-columns: 11rem 1fr;
+      }
+
+      .shot {
+        grid-column: 2;
+        width: min(100%, 22rem);
+        margin-top: 1rem;
+      }
+    }
+
+    @media (max-width: 46rem) {
+      .job {
+        grid-template-columns: 1fr;
+        row-gap: 0.5rem;
+      }
+
+      .job .when {
+        padding-top: 0;
+      }
+    }
+
+    @media (max-width: 46rem) {
+      .shot {
+        grid-column: 1;
+        width: 100%;
+      }
+    }
+
+    /* MAHASISWA AKTIF (kartu sorotan, 2 foto) */
+    .p-ms {
+      --cat: var(--mark);
+    }
+
+    .job.hl {
+      background: color-mix(in srgb, var(--mark) 16%, var(--surface));
+      box-shadow: 0 0 0 2px var(--mark), 0 10px 28px -12px rgba(242, 177, 52, .6);
+      border-left-width: 10px;
+    }
+
+    .job.hl:hover {
+      background: color-mix(in srgb, var(--mark) 22%, var(--surface));
+      box-shadow: 0 0 0 2px var(--mark), 0 10px 28px -12px rgba(242, 177, 52, .8);
+    }
+
+    .job.hl .org {
+      color: var(--ink);
+    }
+
+    .job.hl .badge {
+      background: var(--ink);
+      color: var(--paper);
+    }
+
+    .shots {
+      margin: 0;
+      align-self: start;
+      display: grid;
+      gap: 0.6rem;
+    }
+
+    .shots img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      border-radius: 0.7rem;
+      background: var(--surface);
+    }
+
+    @media (max-width: 64rem) {
+      .shots {
+        grid-column: 2;
+        grid-template-columns: 1fr 1fr;
+        width: min(100%, 30rem);
+        margin-top: 1rem;
+      }
+    }
+
+    @media (max-width: 46rem) {
+      .shots {
+        grid-column: 1;
+        width: 100%;
+      }
+    }
+
+    /* KEAHLIAN: tab */
+    .tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .tabs label {
+      padding: 0.55rem 1.1rem;
+      border-radius: 0.6rem;
+      border: 2px solid var(--ink);
+      font-weight: 600;
+      cursor: pointer;
+      background: var(--surface);
+      transition: transform .15s;
+    }
+
+    .tabs label:hover {
+      transform: translateY(-2px);
+    }
+
+    .tabs input:checked+label {
+      background: var(--ink);
+      color: var(--paper);
+    }
+
+    .tabs input:focus-visible+label {
+      outline: 3px solid var(--mark);
+      outline-offset: 3px;
+    }
+
+    .panel {
+      display: none;
+    }
+
+    :root:has(#s1:checked) #p1,
+    :root:has(#s2:checked) #p2,
+    :root:has(#s3:checked) #p3 {
+      display: block;
+    }
+
+    .chips {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+
+    .chips li {
+      padding: 0.55rem 1rem;
+      border-radius: 999px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      font-weight: 500;
+      transition: transform .15s, border-color .15s, background .15s;
+    }
+
+    .chips li:hover {
+      transform: translateY(-3px) rotate(-1deg);
+      border-color: var(--accent);
+    }
+
+    footer {
+      padding-block: 2.5rem 3rem;
+      color: var(--ink-soft);
+      font-size: 0.92rem;
+      border-top: 1px solid var(--line);
+    }
+
+    @media (max-width: 52rem) {
+
+      .gantt .years,
+      .bar-row {
+        grid-template-columns: 1fr;
+      }
+
+      .gantt .years>span {
+        display: none;
+      }
+
+      .bar-label {
+        padding-bottom: 0;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      .window ul,
+      .rec::before,
+      .nav-status .dot {
+        animation: none;
+      }
+
+      * {
+        transition: none !important;
+      }
+    }
+
+    @media print {
+      :root {
+        --paper: #fff;
+        --surface: #fff;
+        --ink: #111;
+        --ink-soft: #444;
+        --line: #bbb;
+        --hero: #fff;
+        --hero-ink: #111;
+        --hero-soft: #444;
+      }
+
+      body {
+        font-size: 10.5pt;
+      }
+
+      .progress,
+      .nav,
+      .lens,
+      .tabs,
+      .gantt,
+      #peta,
+      .hud,
+      .nowrow {
+        display: none !important;
+      }
+
+      .finder {
+        background: none;
+        padding: 0;
+      }
+
+      .window ul {
+        animation: none;
+      }
+
+      .panel {
+        display: block !important;
+      }
+
+      .job {
+        break-inside: avoid;
+        display: grid !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <span class="progress" aria-hidden="true"></span>
+
+  <nav class="nav" aria-label="Navigasi halaman">
+    <div class="nav-in wrap">
+      <a class="brand" href="#top" aria-label="Muhammad Fadlan Syakur, kembali ke atas"><span
+          class="mono">MFS</span><span class="brand-name">Fadlan Syakur</span></a>
+      <ul class="nav-links">
+        <li><a href="#pengalaman">Pengalaman</a></li>
+        <li><a href="#peta">Peta waktu</a></li>
+        <li><a href="#keahlian">Keahlian</a></li>
+      </ul>
+      <a class="nav-status" href="#j-uq"><span class="dot" aria-hidden="true"></span>Business Analyst di uqibla.asia</a>
+    </div>
+  </nav>
+
+  <header class="hero" id="top">
+    <div class="wrap">
+      <div class="finder">
+        <div class="hud" aria-hidden="true">
+          <span class="rec">Sedang aktif</span>
+        </div>
+
+        <div class="intro">
+          <div class="intro-text">
+            <h1 class="hero-name">Muhammad Fadlan Syakur</h1>
+
+            <p class="sr">Business Analyst, IT Operations Support, Data Analyst, Full-stack Developer, Mentor dan
+              Pengajar, Event Operator, Fotografer dan Videografer, Mahasiswa Aktif.</p>
+            <p class="rotor" aria-hidden="true">
+              <span class="lead">Saya berpengalaman di bidang</span>
+              <span class="window">
+                <ul>
+                  <li>Business Analyst</li>
+                  <li>IT Operations Support</li>
+                  <li>Data Analyst</li>
+                  <li>Full-stack Developer</li>
+                  <li>Mentor dan Pengajar</li>
+                  <li>Event Operator</li>
+                  <li>Fotografer dan Videografer</li>
+                  <li>Business Analyst</li>
+                </ul>
+              </span>
+            </p>
+          </div>
+
+          <!-- FOTO PROFIL: ganti nilai src di bawah dengan file foto Anda, misalnya src="foto-saya.jpg".
+           Rasio terbaik 4:5 (potret). Isi alt dengan deskripsi singkat foto. -->
+          <figure class="portrait">
+            <img alt="Foto Muhammad Fadlan Syakur" width="400" height="500" src="fotofadlan.jpeg">
+          </figure>
+        </div>
+
+        <p class="about" id="tentang">
+          Profesional berlatar belakang di bidang teknologi dan operasional lapangan. Memiliki keahlian
+          dalam menerjemahkan kebutuhan bisnis menjadi Product Requirement Document (PRD) yang terstruktur dan siap
+          dieksekusi. Didukung fondasi kuat di bidang Data Analytics, Full-stack Web Development, serta IT Operations
+          Support, saya terbiasa menjembatani komunikasi antara stakeholder dan tim teknis untuk memastikan setiap
+          proyek berjalan presisi dari konsep hingga realisasi.
+        </p>
+
+        <ul class="nowrow">
+          <li><a href="#j-uq"><strong>Business Analyst</strong></a></li>
+          <li><a href="#j-lk"><strong>IT Operations Support</strong></a></li>
+          <li><a href="#j-wo"><strong>Wedding Organizer</strong></a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+
+    <section id="pengalaman" aria-labelledby="h-pengalaman">
+      <h2 class="section-head" id="h-pengalaman">Pengalaman kerja</h2>
+      <p class="section-note">Satu orang, banyak peran. Pilih lensa untuk melihat pengalaman dari sudut pandang
+        tertentu.</p>
+
+      <fieldset class="lens">
+        <legend>Pilih lensa</legend>
+        <div class="opts">
+          <input class="vh" type="radio" name="lens" id="f-all" checked><label for="f-all"><i></i>Semua</label>
+          <input class="vh" type="radio" name="lens" id="f-an"><label class="l-an" for="f-an"><i></i>Analisis dan
+            produk</label>
+          <input class="vh" type="radio" name="lens" id="f-tek"><label class="l-tek"
+            for="f-tek"><i></i>Teknologi</label>
+          <input class="vh" type="radio" name="lens" id="f-aj"><label class="l-aj" for="f-aj"><i></i>Mengajar</label>
+          <input class="vh" type="radio" name="lens" id="f-ev"><label class="l-ev" for="f-ev"><i></i>Event dan
+            visual</label>
+        </div>
+      </fieldset>
+
+      <div class="timeline">
+
+        <!-- MAHASISWA AKTIF (disorot, 2 foto). Ganti teks dalam [kurung siku] dengan data asli Anda.
+             Ganti src kedua <img> dengan file foto Anda, misalnya src="kampus1.jpeg" dan src="kampus2.jpeg". Rasio terbaik 4:3. -->
+        <article class="job hl p-ms c-an c-tek c-aj c-ev" id="j-ms">
+          <div class="when"><time>2022 - 2026</time><span class="badge">Mahasiswa Teraktif</span>
+          </div>
+          <div>
+            <h3>Mahasiswa Teraktif</h3>
+            <p class="org">Institut Bisnis dan Informatika Kesatuan</p>
+            <p class="meta">Teknologi Informasi, Kota Bogor, Jawa Barat, Indonesia</p>
+            <ul>
+              <li>Aktif dalam organisasi Himpunan Mahasiswa.</li>
+              <li>Dipercaya menjadi Asisten Dosen untuk membimbing kegiatan praktikum.</li>
+              <li>Berperan sebagai Komisaris Tingkat (Komti) dalam mengoordinasikan kegiatan angkatan dan perkuliahan.
+              </li>
+            </ul>
+          </div>
+          <div class="shots">
+            <img loading="lazy" width="400" height="300" alt="Foto kegiatan kuliah Muhammad Fadlan Syakur"
+              src="mahasiswaaktif.jpeg" />
+            <!-- <img loading="lazy" width="400" height="300" alt="Foto kegiatan kampus bersama tim"
+      src="mahasiswaaktif2.jpeg" /> -->
+          </div>
+        </article>
+        <article class="job p-an c-an" id="j-uq">
+          <div class="when"><time datetime="2026-09">Sep 2026 sampai sekarang</time><span class="badge">Saat ini</span>
+          </div>
+          <div>
+            <h3>Business Analyst</h3>
+            <p class="org">uqibla.asia</p>
+            <p class="meta">On-site / Hybrid</p>
+            <ul>
+              <li>Menyusun dan mengelola Product Requirement Document (PRD) Master untuk platform edukasi terpadu.</li>
+              <li>Menganalisis kebutuhan pengguna melalui User Persona dan User Stories, lalu merumuskan Functional
+                Requirements beserta Acceptance Criteria.</li>
+              <li>Merancang Roadmap dan Product Backlog per Sprint untuk Affiliate Program, Analytics Dashboard,
+                Ticketing Acara, dan PMB.</li>
+            </ul>
+          </div>
+          <figure class="shot"
+            style="display: flex; justify-content: center; align-items: center; width: 100%; margin: 1em 0;">
+            <!-- Diubah ke ukuran potret (portrait) -->
+            <img loading="lazy" width="400" height="300" alt="Dokumentasi kegiatan IT Operations Support di LOKET"
+              src="uqibla.jpeg" />
+          </figure>
+        </article>
+        <article class="job p-tek c-tek" id="j-lk">
+          <div class="when"><time datetime="2026-08">Agu 2026 sampai sekarang</time><span class="badge">Saat ini</span>
+          </div>
+          <div>
+            <h3>Information Technology Operations Support (Kontrak)</h3>
+            <p class="org">LOKET</p>
+            <p class="meta">Jakarta, Indonesia (On-site)</p>
+            <ul>
+              <li>Memberikan dukungan teknis (Technical Support) kepada pengguna dan tim internal.</li>
+              <li>Mengelola operasional sistem IT agar layanan tetap berjalan lancar.</li>
+              <li>Melayani pelanggan dengan menangani pertanyaan dan kendala yang masuk.</li>
+            </ul>
+          </div>
+          <figure class="shot">
+            <img loading="lazy" width="400" height="300" alt="Dokumentasi kegiatan IT Operations Support di LOKET"
+              src="fadlandiserver.jpeg" />
+          </figure>
+        </article>
+
+        <article class="job p-an c-an c-tek" id="j-rv">
+          <div class="when"><time datetime="2026-07">Jul 2026</time></div>
+          <div>
+            <h3>Data Analyst (Apprenticeship)</h3>
+            <p class="org">RevoU</p>
+            <p class="meta">Jakarta Selatan, Jakarta, Indonesia (Remote)</p>
+            <ul>
+              <li>Menyelesaikan proyek portofolio analisis data dari awal hingga akhir.</li>
+              <li>Memperoleh sertifikasi Data Analyst.</li>
+            </ul>
+          </div>
+          <figure class="shot">
+            <!-- Ganti 'sertif-revou.jpeg' dengan nama file gambar sertifikat asli Anda -->
+            <img loading="lazy" width="842" height="595" alt="Sertifikat Data Analyst Apprenticeship RevoU"
+              src="sertirevou.jpeg" style="width: 100%; max-width: 800px; height: auto; object-fit: contain;" />
+          </figure>
+        </article>
+        <article class="job p-tek c-tek c-an" id="j-bh">
+          <div class="when"><time datetime="2025-02">Feb 2025 sampai Des 2025</time></div>
+          <div>
+            <h3>Full-stack Developer (Internship)</h3>
+            <p class="org">PT Bina Haramain Indonesia</p>
+            <p class="meta">Kota Bogor, Jawa Barat, Indonesia (Hybrid)</p>
+            <ul>
+              <li>Berperan ganda sebagai Assistant Project Manager dan Web Developer untuk perusahaan travel Haji dan
+                Umrah.</li>
+              <li>Membantu perencanaan proyek dan memantau kemajuan pekerjaan.</li>
+              <li>Mengoordinasikan tim lintas fungsi agar target proyek tercapai.</li>
+              <li>Mengembangkan dan memelihara situs web perusahaan.</li>
+            </ul>
+          </div>
+          <!-- PENYESUAIAN: Menambahkan Flexbox di sini untuk menengahkan gambar -->
+          <figure class="shot"
+            style="display: flex; justify-content: center; align-items: center; width: 100%; margin: 1em 0;">
+            <img loading="lazy" width="842" height="595"
+              alt="Sertifikat Magang Full-stack Developer di PT Bina Haramain Indonesia" src="sertifmagang.jpeg"
+              style="width: 100%; max-width: 800px; height: auto; object-fit: contain;" />
+          </figure>
+        </article>
+        <article class="job p-aj c-aj c-tek" id="j-ib">
+          <div class="when"><time datetime="2024-09">Sep 2024 sampai Feb 2025</time></div>
+          <div>
+            <h3>Teaching Assistant (Desain Grafis dan Jaringan Komputer)</h3>
+            <p class="org">IBI Kesatuan Bogor</p>
+            <p class="meta">Kota Bogor, Jawa Barat, Indonesia (On-site)</p>
+            <ul>
+              <li>Membantu dosen pada mata kuliah Desain Grafis dan Jaringan Komputer.</li>
+              <li>Menyiapkan materi dan sesi praktikum laboratorium.</li>
+              <li>Membimbing mahasiswa dalam konfigurasi jaringan, troubleshooting teknis, dan penggunaan software
+                desain.</li>
+              <li>Menguji dan menilai tugas mahasiswa.</li>
+            </ul>
+          </div>
+          <figure class="shot">
+            <!-- Ganti 'sertif-asdos-ibik.jpeg' dengan nama file gambar sertifikat asli Anda -->
+            <img loading="lazy" width="842" height="595"
+              alt="Sertifikat Teaching Assistant Desain Grafis dan Jaringan Komputer IBI Kesatuan Bogor"
+              src="sertifasdos.jpeg" style="width: 100%; max-width: 800px; height: auto; object-fit: contain;" />
+          </figure>
+        </article>
+        <article class="job p-aj c-aj c-tek" id="j-am">
+          <div class="when"><time datetime="2024-08">Agu 2024 sampai Nov 2024</time></div>
+          <div>
+            <h3>Robotics Teaching Assistant dan Mentor</h3>
+            <p class="org">PT Amanji Indonesia</p>
+            <p class="meta">Morowali, Sulawesi Tengah, Indonesia (On-site)</p>
+            <ul>
+              <li>Menyampaikan pelatihan robotik kepada siswa.</li>
+              <li>Memandu dan memantau siswa dalam merakit serta memprogram robot.</li>
+              <li>Memberikan bimbingan teknis selama pembuatan proyek praktis.</li>
+            </ul>
+          </div>
+          <figure class="shot">
+            <!-- Ganti 'sertif-amanji.jpeg' dengan nama file sertifikat asli Anda -->
+            <img loading="lazy" width="842" height="595"
+              alt="Sertifikat Robotics Teaching Assistant di PT Amanji Indonesia" src="robotics.jpeg"
+              style="width: 100%; max-width: 800px; height: auto; object-fit: contain;" />
+          </figure>
+        </article>
+        <article class="job p-ev c-ev" id="j-wo">
+          <div class="when"><time datetime="2024-01">Jan 2024 sampai sekarang</time><span class="badge">Saat ini</span>
+          </div>
+          <div>
+            <h3>Wedding Organizer (Freelance)</h3>
+            <p class="org">PT Papazka Adikarya Utama</p>
+            <p class="meta">Kota Bogor, Jawa Barat, Indonesia (On-site)</p>
+            <ul>
+              <li>Mengoordinasikan eksekusi acara pernikahan dari tahap perencanaan hingga hari-H.</li>
+              <li>Mengelola jadwal dan memimpin koordinasi dengan klien serta vendor.</li>
+              <li>Memimpin tim eksekusi dan memecahkan masalah operasional langsung di lapangan.</li>
+            </ul>
+            <p class="skills-line"><b>Keahlian:</b> Public Speaking, Teamwork, Leadership, Problem Solving, Event
+              Operations.</p>
+          </div>
+          <figure class="shot">
+            <img loading="lazy" width="400" height="300"
+              alt="Dokumentasi kegiatan Wedding Organizer PT Papazka Adikarya Utama" src="fadlanwo.jpeg" />
+          </figure>
+        </article>
+
+        <article class="job p-ev c-ev" id="j-tp">
+          <div class="when"><time datetime="2021-01">Jan 2021 sampai Jul 2026</time></div>
+          <div>
+            <h3>Fotografer dan Videografer (Freelance)</h3>
+            <p class="org">Thepotomoto</p>
+            <p class="meta">Jabodetabek / Jakarta Metropolitan Area (On-site)</p>
+            <ul>
+              <li>Mengambil foto dan video profesional untuk dokumentasi acara.</li>
+              <li>Menghasilkan materi visual untuk kebutuhan komersial.</li>
+            </ul>
+          </div>
+          <figure class="shot">
+            <!-- Ganti 'kegiatan-thepotomoto.jpg' dengan nama file foto asli Anda -->
+            <img loading="lazy" width="400" height="300"
+              alt="Dokumentasi kegiatan Fotografer dan Videografer di Thepotomoto" src="fotografer.jpeg" />
+          </figure>
+        </article>
+      </div>
+    </section>
+
+    <section id="peta" aria-labelledby="h-peta">
+      <h2 class="section-head" id="h-peta">Peta waktu</h2>
+      <p class="section-note">Lima tahun lebih berjalan di beberapa jalur sekaligus. Arahkan kursor ke batang untuk
+        menyorot kartu pengalamannya, atau pilih lensa di atas untuk menyaring.</p>
+
+      <ol class="gantt" aria-label="Rentang waktu pengalaman kerja, Januari 2021 sampai Oktober 2026">
+        <li class="years" aria-hidden="true" style="display:grid"><span></span>
+          <div><span>2021</span><span>2022</span><span>2023</span><span>2024</span><span>2025</span><span>2026</span>
+          </div>
+        </li>
+        <li class="bar-row p-an c-an"><span class="bar-label">Business Analyst, uqibla.asia</span>
+          <div class="track"><a class="bar live" id="b-uq" href="#j-uq" style="grid-column:69 / span 2"
+              title="Business Analyst, Sep 2026 sampai sekarang" aria-label="Lihat pengalaman Business Analyst"></a>
+          </div>
+        </li>
+        <li class="bar-row p-tek c-tek"><span class="bar-label">IT Operations Support, LOKET</span>
+          <div class="track"><a class="bar live" id="b-lk" href="#j-lk" style="grid-column:68 / span 3"
+              title="IT Operations Support, Agu 2026 sampai sekarang"
+              aria-label="Lihat pengalaman IT Operations Support"></a></div>
+        </li>
+        <li class="bar-row p-an c-an c-tek"><span class="bar-label">Data Analyst, RevoU</span>
+          <div class="track"><a class="bar" id="b-rv" href="#j-rv" style="grid-column:67 / span 1"
+              title="Data Analyst, Jul 2026" aria-label="Lihat pengalaman Data Analyst"></a></div>
+        </li>
+        <li class="bar-row p-tek c-tek c-an"><span class="bar-label">Full-stack Developer, PT Bina Haramain</span>
+          <div class="track"><a class="bar" id="b-bh" href="#j-bh" style="grid-column:50 / span 11"
+              title="Full-stack Developer, Feb 2025 sampai Des 2025"
+              aria-label="Lihat pengalaman Full-stack Developer"></a></div>
+        </li>
+        <li class="bar-row p-aj c-aj c-tek"><span class="bar-label">Teaching Assistant, IBI Kesatuan</span>
+          <div class="track"><a class="bar" id="b-ib" href="#j-ib" style="grid-column:45 / span 6"
+              title="Teaching Assistant, Sep 2024 sampai Feb 2025" aria-label="Lihat pengalaman Teaching Assistant"></a>
+          </div>
+        </li>
+        <li class="bar-row p-aj c-aj c-tek"><span class="bar-label">Robotics Mentor, PT Amanji</span>
+          <div class="track"><a class="bar" id="b-am" href="#j-am" style="grid-column:44 / span 4"
+              title="Robotics Mentor, Agu 2024 sampai Nov 2024" aria-label="Lihat pengalaman Robotics Mentor"></a></div>
+        </li>
+        <li class="bar-row p-ev c-ev"><span class="bar-label">Wedding Organizer, PT Papazka</span>
+          <div class="track"><a class="bar live" id="b-wo" href="#j-wo" style="grid-column:37 / span 34"
+              title="Wedding Organizer, Jan 2024 sampai sekarang" aria-label="Lihat pengalaman Wedding Organizer"></a>
+          </div>
+        </li>
+        <li class="bar-row p-ev c-ev"><span class="bar-label">Fotografer dan Videografer, Thepotomoto</span>
+          <div class="track"><a class="bar" id="b-tp" href="#j-tp" style="grid-column:1 / span 67"
+              title="Fotografer dan Videografer, Jan 2021 sampai Jul 2026"
+              aria-label="Lihat pengalaman Fotografer dan Videografer"></a></div>
+        </li>
+      </ol>
+    </section>
+
+    <section id="keahlian" aria-labelledby="h-keahlian">
+      <h2 class="section-head" id="h-keahlian">Keahlian utama</h2>
+      <p class="section-note">Pilih kelompok keahlian.</p>
+
+      <div class="tabs" role="radiogroup" aria-label="Kelompok keahlian">
+        <input class="vh" type="radio" name="skill" id="s1" checked><label for="s1">Bisnis dan teknis</label>
+        <input class="vh" type="radio" name="skill" id="s2"><label for="s2">Analitis</label>
+        <input class="vh" type="radio" name="skill" id="s3"><label for="s3">Soft skills</label>
+      </div>
+
+      <div class="panel" id="p1">
+        <h3 class="sr">Bisnis dan teknis</h3>
+        <ul class="chips">
+          <li>Product Requirement Document (PRD)</li>
+          <li>User Persona dan User Stories</li>
+          <li>Functional Requirements</li>
+          <li>Acceptance Criteria</li>
+          <li>Roadmap dan Product Backlog</li>
+          <li>KPI dan Success Metrics</li>
+          <li>Definition of Done dan UAT</li>
+          <li>IT Operations dan Technical Support</li>
+          <li>Web Development (Full-stack)</li>
+          <li>Jaringan Komputer</li>
+          <li>Robotik</li>
+          <li>Desain Grafis</li>
+          <li>Fotografi dan Videografi</li>
+        </ul>
+      </div>
+      <div class="panel" id="p2">
+        <h3 class="sr">Analitis</h3>
+        <ul class="chips">
+          <li>Analisis kebutuhan pengguna</li>
+          <li>Analisis data (sertifikasi Data Analyst RevoU)</li>
+          <li>Analisis risiko dan mitigasi</li>
+          <li>Troubleshooting teknis</li>
+          <li>Perencanaan dan pemantauan proyek</li>
+        </ul>
+      </div>
+      <div class="panel" id="p3">
+        <h3 class="sr">Soft skills</h3>
+        <ul class="chips">
+          <li>Public Speaking</li>
+          <li>Teamwork dan koordinasi lintas fungsi</li>
+          <li>Leadership</li>
+          <li>Problem Solving</li>
+          <li>Mentoring dan membimbing</li>
+          <li>Komunikasi dengan klien dan vendor</li>
+          <li>Event Operations</li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+</body>
+
+</html>
