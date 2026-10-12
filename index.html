@@ -1372,7 +1372,7 @@
 
     /* ============ FOTO PROFIL RESPONSIF ============ */
     .intro {
-      grid-template-columns: minmax(0, 1fr) clamp(9rem, 24vw, 17rem);
+      grid-template-columns: minmax(0, 1fr) clamp(9rem, 26vw, 20rem);
       align-items: center;
     }
 
@@ -1383,7 +1383,7 @@
 
     .portrait {
       width: 100%;
-      max-width: 17rem;
+      max-width: 20rem;
       margin: 0;
       justify-self: end;
     }
@@ -1391,8 +1391,9 @@
     .portrait img {
       width: 100%;
       height: auto;
-      aspect-ratio: 4 / 5;
-      object-fit: cover;
+      aspect-ratio: auto;
+      max-height: min(32rem, 70vh);
+      object-fit: contain;
       object-position: center top;
       box-shadow: clamp(5px, 1vw, 10px) clamp(5px, 1vw, 10px) 0 var(--mark);
     }
